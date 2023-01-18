@@ -65,20 +65,20 @@ The password is checked as follows:
 * For an empty string or cancelled input, show “Canceled”
 */
 
-let userName = prompt("Who's there","");
-let password = ''; 
+let userName = prompt("Who's there", "");
+let password = '';
 
 if (userName == 'Admin') {
-    password = prompt('Enter your password please','');
-    if(password == 'TheMaster'){
+    password = prompt('Enter your password please', '');
+    if (password === 'TheMaster') {
         alert('Welcome!');
-    }else if(password == '' || password == null){
+    } else if (password === '' || password == null) {
         alert('Canceled');
-    }else if(password != 'TheMaster'){
+    } else if (password != 'TheMaster') {
         alert('Wrong password');
     }
-}else if(userName == "" || userName == null){
+} else if (userName === "" || userName == null) {
     alert('Canceled');
-}else if(userName != 'Admin') {
+} else if (userName != 'Admin') {
     alert(`User ${userName} don't find in the database`);
 }
